@@ -1,0 +1,81 @@
+<html>
+<head>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.timers.min.js"></script>
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .pcbg {
+            height: 100%;
+            width: 100%;
+            background-size: 100% 100%;
+            background-image: url(img/bg1.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .pctext {
+            height: 40%;
+            width: 80%;
+            position: absolute;
+            top: 12%;
+            left: 10%;
+            word-break: break-all;
+            word-wrap: break-word;
+            color: #3c3535;
+            font-size: xx-large;
+        }
+
+        .mobilebg {
+            height: 100%;
+            width: 100%;
+            background-size: 100% 100%;
+            background-image: url(img/bg2.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .mobiletext {
+            height: 40%;
+            width: 80%;
+            position: absolute;
+            top: 8%;
+            left: 10%;
+            word-break: break-all;
+            word-wrap: break-word;
+            color: #3c3535;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <div id="bg">
+    </div>
+    <p id="text">6LCi6LCi55yL5Yiw6L+Z6KGM5a2X55qE5L2g77yB5LiA5a6a5piv5Liq57uG5b+D55qE54yr6Ze35Y+w5LqG77yB77yB57uZ5L2g54yu5LiK5bGe5LqO5L2g5LiA5Liq5Lq655qE5o6M5aOwfueOsOWcqOaYrzIwMjHlubTnmoQxMuaciDIx5pel77yBbW9uYWth5q2j5Zyo5Yi25L2c6L+Z5Liq6KeG6aKR5ZOm77yM6ams5LiK5bCx6KaB5Zyj6K+e6IqC5LqG77yM5YWI56Wd5L2g5Zyj6K+e6IqC5b+r5LmQ5Za177yB6Jm954S25L2g55yL5Yiw55qE5pe25YCZ5bqU6K+l5q2j5aW95piv5Zyj6K+e6IqC77yM5oiW6ICF5piv5Zyj6K+e5LmL5ZCO5LqG77yM5L2g6YKj6L655pyJ5rKh5pyJ5LiL6Zuq5ZGi77yf5LiA5a6a6KaB5rOo5oSP5L+d5pqW5Za177yB5ZevLi4u6L+Y5pyJ77yM5aW95oOz5rC46L+c5ZKM5L2g5Zyo5LiA6LW35ZGA44CC6ZO+5o6l77yaaHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMWJqeE9DX2tadUZnYWQ4ZlJBN0lhX3cg5o+Q5Y+W56CB77yac3BzZQ==</p>
+</body>
+</html>
+<script>
+    if (IsPC()) {
+        $("#bg").addClass("pcbg");
+        $("#text").addClass("pctext");
+    } else {
+        $("#bg").addClass("mobilebg");
+        $("#text").addClass("mobiletext");
+    }
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+</script>
